@@ -13,6 +13,7 @@ RUN apt-get update \
     python3.9 \
     python3.9-dev \
     python3.9-venv \
+    sudo \
     tmux \
     wget \
     && apt-get -y clean \

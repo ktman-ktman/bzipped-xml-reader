@@ -4,4 +4,5 @@
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     },
+    "julia.environmentPath": "/workspaces/bzipped-xml-reader",
 }
