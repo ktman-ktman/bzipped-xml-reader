@@ -1,0 +1,33 @@
+{
+    "name": "bzipped-xml-reader",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "..",
+        "args": {
+            "VARIANT": "1.9.0-beta3-bullseye",
+            "USERNAME": "vscode",
+            "USE_UID": "1000",
+            "USE_GID": "1000",
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "/bin/bash",
+                        "args": [
+                            "-l"
+                        ]
+                    }
+                }
+            },
+            "extensions": [
+                "julialang.language-julia-insider",
+                "VisualStudioExptTeam.vscodeintellicode",
+            ],
+        }
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+}
